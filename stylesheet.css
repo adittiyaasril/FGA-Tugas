@@ -1,0 +1,550 @@
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #8e44ad;
+  position:fixed;
+  top:0;
+  z-index:99;
+}
+/* navbar */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* logo */
+.logo-header {
+ font-size: 32px;
+ font-weight: bold;
+}
+/* msnu */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #9b59b6;
+ border-radius: 5px;
+ transition: 0.5s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* dropdown menu*/
+
+.layanan,.about-us {
+ position: relative; /*relative agar dropdown bisa abs*/
+}
+.dropdown {
+ background-color: #8e44ad;
+ padding: 1em 0;
+ position: absolute; /**/
+ display: none;
+ left:-1.5%;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #9b59b6;
+}
+
+.layanan:hover .dropdown, .about-us:hover .dropdown{
+ display: block;
+}
+
+/* checkbox Navbar menu default chckbox dan hamburger tidak terlihat */
+input[type=checkbox]{
+ display: none;
+} 
+/*hamburger menu*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+.hamburger2, .hamburger3{
+  display:none;
+  font-size: 18px;
+  user-select:none;
+}
+/* madia query jika ukuran 786 kebawah*/
+@media (max-width: 786px) {
+  .menu { 
+   display:none;
+   position: absolute;
+   background-color:#8e44ad;
+   right: 0;
+   left: 0;
+   text-align: center;
+   padding: 16px 0;
+  }
+  .menu li:hover {
+   display: inline-block;
+   background-color:#9b59b6;
+   transition: 0.3s ease;
+  }
+  .menu li  li {
+   margin-top: 12px;
+  }
+  input[id="checkbox_toggle"]:checked ~ .menu{
+   display: block;
+  }
+  .hamburger {
+   display: block;
+  }
+  input[id="checkbox_toggle2"]:checked ~ .about-us dropdown{
+   display: block;
+  }
+  input[id="checkbox_toggle3"]:checked ~ .layanan dropdown{
+   display: block;
+  }
+  .hamburger2, .hamburger3 {
+   display: inline-block;
+  }
+  .dropdown {    
+   left: 50%;
+   top: 30px;
+   transform: translateX(35%);
+  }
+  .dropdown li:hover {
+   background-color: #9b59b6;
+  }
+}
+/* Adittiya */
+body{
+  overflow-x: hidden;
+}
+
+nav .left img{
+  width: 90px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DCDCDC;
+  padding: 0px 5% 0px 5%;
+}
+
+nav .right a{
+  text-decoration: none;
+  color: black;
+}
+
+.slides{
+  width: 100%;
+  position: relative;
+  padding-top: 5px;
+}
+
+.slides .slide{
+  display: none;
+}
+
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slides .navigation .prev, .slides .navigation .next{
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+  background: rgba(0,0,0,1);
+}
+
+@keyframes fade {
+  from{opacity: 0.3}
+  to {opacity: 1}
+}
+
+@media (max-width: 992px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+.container {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin: 30px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h3 {
+  font-size: 25px;
+  border-bottom: 3px solid #c0a080;
+  margin:50px 0px 0px 0px;
+  padding:5px;
+  text-align: center;
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.container .content {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.content h4 {
+  text-shadow: 3px 2px 1px black;
+}
+.content p {
+  color: skyblue;
+  text-shadow: 3px 2px 5px black;
+}
+
+/* Adib */
+.main {
+  padding: 0px;
+}
+
+.service {
+  margin: 40px 100px;
+  padding: 40px 24px;
+}
+
+.service h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+hr {
+  height: 2px;
+  border: none;
+  background-color: #000;
+  width: 25%;
+  margin-top: 0;
+}
+
+.service-wrapper {
+  width: 100%;
+  margin-top: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 25%;
+  float: left;
+  margin: 30px 10px;
+  padding: 0 0 5px 0;
+  box-shadow: 1px 2px 6px #000;
+  display: block;
+  margin-left: 4.16%;
+  margin-right: 4.16%;
+  min-height: 300px;
+  max-height: 400px;
+}
+
+.card img {
+  border-radius: 5px;
+  max-width: 100%;
+  min-width: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .card-body {
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-body p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-text p {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Form Arya */
+
+.form {
+  margin: 100px 100px;
+}
+
+.form-judul {
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.form-main {
+  padding-top: 50px;
+}
+
+input,
+textarea {
+  padding: 20px;
+  width: 500px;
+  margin-top: 10px;
+  border: 1px solid #dee7ec;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.form-main p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-send {
+  width: 200px;
+  background-color: #efefef;
+  color: gray;
+  font-size: 18px;
+  box-shadow: 0 7px #d1d1d1;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-send:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+/* Amri */
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*='col-'] {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+li i {
+  margin-right: 10px;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #8e44ad;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  background-color: #7b3c96;
+  padding-left: 15px;
+}

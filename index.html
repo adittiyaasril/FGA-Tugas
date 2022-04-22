@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perbankan</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="font-awesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- logo-->
+          <div class="logo-header">Bank Bankan</div>
+        <!-- nav menu -->
+          <ul class="nav-links">
+        <!-- checkbox hack -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        
+        <!-- nav menu -->
+        <div class="menu">
+          <li><a href="/">Home</a></li>
+          <li class="about-us">
+            <a class="tentang" href="/">Tentang kami</a>
+            <input type="checkbox" id="checkbox_toggle2" />
+            <label for="checkbox_toggle2" class="hamburger2">&#9776;</label>
+              <!-- dropdown tentang kami -->
+    
+            <ul class="dropdown">
+              <li><a href="/">Sejarah</a></li>
+              <li><a href="/">Visi & Misi</a></li>
+            </ul>
+    
+    
+          </li>
+          <li class="layanan">
+            <a href="/">Layanan</a>
+            <input type="checkbox" id="checkbox_toggle3" />
+            <label for="checkbox_toggle3" class="hamburger3">&#9776;</label>
+              <!-- dropdown layanan -->
+            <ul class="dropdown">
+              <li><a href="/">Tabungan </a></li>
+              <li><a href="/">Pinjaman</a></li>
+              <li><a href="/">Investasi</a></li>
+            </ul>
+          </li>
+          <li><a href="/">Karir</a></li>
+        </div>
+          </ul>
+      </nav>
+    </header>
+    <!--Image Slider Adittiya-->
+    <div class="container">
+      <h3>BERGABUNGLAH BERSAMA KAMI</h3>
+      <div class="slides">
+        <div class="slide">
+          <img src="img/gambar1.jpg" alt="">
+          <div class="content">
+          <h4>Bank Bankan</h4>
+              <p>Bank Pilihan Utama, Kuat, Terpercaya, Unggul Bersaing, Kontributif.</p>
+          </div>
+  
+        </div>
+        <div class="slide">
+          <img src="img/gambar2.jpg" alt="">
+          <div class="content">
+          <h4>Kemudahan Bertransaksi</h4>
+              <p>Dapatkan keuntungan dengan mudahnya akses dan bertransaksi di Bank Bankan.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/gambar3.jpg" alt="">
+          <div class="content">
+          <h4>Pelayanan Terbaik</h4>
+              <p>Melayani nasabah dengan tulus dan sepenuh hati.</p>
+          </div>
+        </div>
+        <div class="navigation">
+          <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+          <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+        </div>
+      </div>
+    </div>
+  
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+  
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+  
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+          if (n > slides.length)
+          {
+            slideIndex = 1;
+          }
+          if (n < 1)
+          {
+            slideIndex = slides.length
+          }
+          for (i = 0; i < slides.length; i++)
+          {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex-1].style.display = "block";
+        }
+      </script>
+
+
+
+    <!-- layanan Adib -->
+    <div class="main">
+      <div class="service">
+        <h3>LAYANAN</h3>
+        <hr />
+        <div class="service-wrapper">
+          <!-- card 1 -->
+          <div class="card col-3">
+            <img src="https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+            <div class="card-body">
+              <p>Tabungan</p>
+              <div class="card-text">
+                <p>kami siap melayani anda dalam penyimpanan uang maupun aset lain</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="card col-3">
+            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+            <div class="card-body">
+              <p>Pinjaman</p>
+              <div class="card-text">
+                <p>kami memiliki jenis pinjaman yang anda bisa pilih, temukan pinjaman yang palin cocok untuk Anda</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="card col-3">
+            <img src=" https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="" />
+            <div class="card-body">
+              <p>Investasi</p>
+              <div class="card-text">
+                <p>kami memiliki berbagai jenis Investasi, silahkan pilih jenis Investasi yang cocok untuk Anda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Arya -->
+    <div class="form">
+      <h2 class="form-judul">KRITIK & SARAN</h2>
+      <hr />
+      <div class="form-main">
+        <p>Email</p>
+        <input placeholder="ex:arya@gmail.com" />
+
+        <p>Message</p>
+        <textarea placeholder="Tulis kritik/saran"></textarea>
+
+        <br />
+        <input type="submit" class="btn-send" value="SEND" />
+      </div>
+    </div>
+
+    <!-- footer Amri -->
+    <footer>
+      <div class="row">
+        <div class="col-3 col-s-12">
+          <h2 class="logo">Bank Bankan</h2>
+        </div>
+        <div class="col-3 col-s-12">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-3 col-s-12">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="#">Tabungan</a></li>
+            <li><a href="#">Pinjaman</a></li>
+            <li><a href="#">Investasi</a></li>
+          </ul>
+        </div>
+        <div class="col-3 col-s-12">
+          <h3>Sosial Media</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright col-12 col-s-12">
+        <p>&copy; A20 Digital Talent Scholarship 2022. All right reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
